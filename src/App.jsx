@@ -1,13 +1,13 @@
-import Signup from "./Components/Form"
-
-
+'use client';
+import { Button } from 'flowbite-react';
+Button
 
 function App() {
 
   return (
     <>
     <div className=" flex justify-center p-10">
-        <Signup/>
+   
     </div>
     </>
   )
