@@ -1,13 +1,16 @@
 'use client';
-import { Button } from 'flowbite-react';
-Button
+
+import { Navigation } from "./Components/Navigation";
+import Signup from "./Pages/Signup";
+
 
 function App() {
 
   return (
     <>
-    <div className=" flex justify-center p-10">
-   
+    <div className="">
+      <Navigation/>
+
     </div>
     </>
   )
