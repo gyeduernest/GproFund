@@ -1,7 +1,6 @@
 'use client';
 
 import { Navigation } from "./Components/Navigation";
-import Signup from "./Pages/Signup";
 
 
 function App() {
