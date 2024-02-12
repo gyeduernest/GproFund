@@ -3,6 +3,8 @@ import Donationswallet from '../Components/Cards/Donationswallet'
 import SavedProjects from '../Components/Cards/SavedProjects'
 import TopDonation from '../Components/Cards/TopDonation'
 import Firstchart from '../Charts/FirstChart'
+import RecentDonations from '../Components/RecentDonations'
+import Donationmethods from '../Components/Donationmethods'
 
 export default function Dashboard() {
   return (
@@ -13,10 +15,9 @@ export default function Dashboard() {
   </div>
   <div className="sm:mb-10 mb-10"><SavedProjects/></div>
   <div className="sm:mb-10 mb-10"><TopDonation/></div>
+  <div className="mt-10"><Donationmethods/></div>
   <div className="col-span-2 lg:h-80 h-80 "><Firstchart/></div>
-  <div className="...">05</div>
-  <div className="...">06</div>
-  <div className="col-span-2 ...">07</div>
+  <div className="col-span-2"><RecentDonations/></div>
 </div>
     </div>
   )

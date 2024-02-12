@@ -9,7 +9,6 @@ import Search from "../Pages/Search";
 import Signup from "../Pages/Signup"
 import Projects from "../Pages/Projects";
 import Settings from "../Pages/Settings";
-import Donation from "../Pages/Saved";
 import EditProfile from "./EditProfile";
 import Saved from "../Pages/Saved";
 import Notifications from "./Notifications";

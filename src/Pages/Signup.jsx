@@ -21,7 +21,7 @@ const [error, setError] = useState("")
 
   return (
     
-    <div className='flex justify-center py-32'>
+    <div className='flex justify-center py-32 px-5'>
 
     <form className="flex max-w-md flex-col py-5 gap-4 w-96">
       <h1>
