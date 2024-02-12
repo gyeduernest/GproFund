@@ -9,7 +9,12 @@ import Search from "../Pages/Search";
 import Signup from "../Pages/Signup"
 import Projects from "../Pages/Projects";
 import Settings from "../Pages/Settings";
-import Donation from "../Pages/Donation";
+import Donation from "../Pages/Saved";
+import EditProfile from "./EditProfile";
+import Saved from "../Pages/Saved";
+import Notifications from "./Notifications";
+import FilteredContent from "./FilteredContent";
+import SecuritySettings from "./SecuritySettings";
 
 
 
@@ -98,7 +103,7 @@ export function Navigation() {
           </NavLink>
 
 
-          <NavLink to="/donation">
+          <NavLink to="/saved">
 
             <li className="mb-10 flex gap-4 items-center rounded-md w-40  p-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -106,7 +111,7 @@ export function Navigation() {
               </svg>
 
             <p className="text-sm font-bold ">
-              Donation  
+              Saved  
             </p>   
             </li>
           </NavLink>
@@ -124,7 +129,7 @@ export function Navigation() {
             </li>
           </NavLink>
             <li>
-              <Swap/>
+              <Swap text="Dark mode"/>
             </li>
             
           </ul>
@@ -135,7 +140,9 @@ export function Navigation() {
   {/* 
       MOBILE AND TABLET NAVIGATION */}
 
-          <div className="flex md:flex px-10 py-3 bg-slate-50 top-[600px] relative md:h-20 sm:px-16  h-20 gap-8 sm:flex md:gap-40 sm:gap-20 md:px-20 lg:hidden">
+          <div className="top-[540px] w-full lg:hidden sm:block md:block block fixed z-50">
+            <div className="flex md:flex px-10 py-3 bg-slate-50  md:h-20 sm:px-16  h-20 gap-8 sm:flex md:gap-40 sm:gap-20 md:px-20 lg:hidden">
+
         <NavLink to="/dashboard">
 
           <Button color="gray" size="sm" className="h-10 w-10">
@@ -167,7 +174,7 @@ export function Navigation() {
 
 
 
-        <NavLink to="/donation">
+        <NavLink to="/saved">
 
           <Button color="gray" size="sm" className="h-10 w-10">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -189,6 +196,7 @@ export function Navigation() {
           </Button>
         </NavLink>
 
+            </div>
           
 
 
@@ -198,9 +206,12 @@ export function Navigation() {
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/search" element={<Search/>} />
           <Route path="/projects" element={<Projects/>} />
-          <Route path="/donation" element={<Donation/>} />
+          <Route path="/saved" element={<Saved/>} />
           <Route path="/settings" element={<Settings/>} />
-          
+          <Route path="/editprofile" element={<EditProfile/>}/>          
+          <Route path="/notifications" element={<Notifications/>}/> 
+          <Route path="/FilteredContent" element={<FilteredContent/>}/>         
+          <Route path="/securitysettings" element={<SecuritySettings/>}/>         
         </Routes>
 
 

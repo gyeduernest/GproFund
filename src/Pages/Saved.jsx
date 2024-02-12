@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Donation() {
+export default function Saved() {
   return (
     <div className='flex justify-center'>
 
