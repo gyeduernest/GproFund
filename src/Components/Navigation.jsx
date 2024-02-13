@@ -19,12 +19,19 @@ import SecuritySettings from "./SecuritySettings";
 
 
 export function Navigation() {
+  
+  
+
 
   
   
   return (
-        <Router>
+    
+    
+
     <>
+
+        <Router>
     <div className="lg:p-2  md:p-10 sm:p-3 bg-slate-50 w-full fixed z-50">
 
       
@@ -33,7 +40,8 @@ export function Navigation() {
         <div className="flex items-center gap-4  lg:gap-8 w-full  lg:py-2   lg:px-20 justify-between">
           <div className="hidden lg:flex md:flex sm:block">
                 <h3>
-                  Username
+  
+              username
                 </h3>
           </div>
                 <div className="flex md:gap-4 items-center lg:gap-8 gap-5 px-5 ">
@@ -200,21 +208,26 @@ export function Navigation() {
 
 
           </div>
+
         <Routes>
-          <Route path="/" element={<Signup/>}/>
-          <Route path="/dashboard" element={<Dashboard/>} />
-          <Route path="/search" element={<Search/>} />
-          <Route path="/projects" element={<Projects/>} />
-          <Route path="/saved" element={<Saved/>} />
-          <Route path="/settings" element={<Settings/>} />
-          <Route path="/editprofile" element={<EditProfile/>}/>          
-          <Route path="/notifications" element={<Notifications/>}/> 
-          <Route path="/FilteredContent" element={<FilteredContent/>}/>         
-          <Route path="/securitysettings" element={<SecuritySettings/>}/>         
+              <Route path="/" element={<Signup/>}/>
+              <Route path="/dashboard" element={<Dashboard/>} />
+              <Route path="/search" element={<Search/>} />
+              <Route path="/projects" element={<Projects/>} />
+              <Route path="/saved" element={<Saved/>} />
+              <Route path="/settings" element={<Settings/>} />
+              <Route path="/editprofile" element={<EditProfile/>}/>          
+              <Route path="/notifications" element={<Notifications/>}/> 
+              <Route path="/FilteredContent" element={<FilteredContent/>}/>         
+              <Route path="/securitysettings" element={<SecuritySettings/>}/>         
         </Routes>
 
 
-    </>
+
         </Router>
+
+    </>
+
+      
   );
 }

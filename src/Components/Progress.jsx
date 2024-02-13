@@ -1,6 +1,6 @@
 
 import { Progress } from 'flowbite-react';
 
-export default function ProgressBar() {
-  return <Progress progress={45} />;
+export default function ProgressBar(props) {
+  return <Progress progress={props.progress} />;
 }

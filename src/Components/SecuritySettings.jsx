@@ -4,12 +4,14 @@
 import {  Button } from 'flowbite-react';
 import ProfileCard from './Profile';
 import { Label, TextInput, Textarea } from 'flowbite-react';
+import { useContext } from 'react';
+import { UserContext } from '../Context/UserContext';
 
 
 
 export default function SecuritySettings() {
 
-
+const {password} = useContext(UserContext)
   
   return (
     
@@ -22,7 +24,7 @@ export default function SecuritySettings() {
         <div className="mb-2 block">
           <Label htmlFor="Password" value="Password" />
         </div>
-        <TextInput id="Password" type='password' placeholder="Bonnie Green" addon="👁" required />
+        <TextInput id="Password" type='password'  value={password} addon="👁" required />
       </div>
 
             

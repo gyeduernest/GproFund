@@ -2,6 +2,7 @@
 
 import { Avatar, Dropdown } from 'flowbite-react';
 import Swap from './Toggle';
+import Logout from '../Pages/Signout';
 
 export default function AvatarDropdown() {
   return (
@@ -20,7 +21,7 @@ export default function AvatarDropdown() {
       <div className='px-3 mt-5 block sm:block md:block lg:hidden'>
       <Swap/>
       </div>
-      <Dropdown.Item>Sign out</Dropdown.Item>
+      <Dropdown.Item><Logout/></Dropdown.Item>
     </Dropdown>
   );
 }

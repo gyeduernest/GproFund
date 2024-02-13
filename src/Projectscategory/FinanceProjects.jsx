@@ -1,6 +1,6 @@
 'use client';
 
-import { Badge, Button} from "flowbite-react";
+import { Badge} from "flowbite-react";
 import Bookmarks from "../Components/Bookmarks";
 import { Link } from "react-router-dom";
 import projectData from "../datafolder/projectData";
@@ -13,11 +13,11 @@ import Allprojectsbadge from "../BadgeComponents/Allprojectsbadge";
 import Healthbadge from "../BadgeComponents/Healthbadge"
 
 
-
 // ... (previous imports)
 
-export default function Projects() {
+export default function FinanceProjects() {
 
+  const financeProjects = projectData.filter((project) => project.category === 'Finance');
 
 
 
@@ -26,9 +26,9 @@ export default function Projects() {
 
 
   return (
-    <div className="lg:pl-72 md:py-24 py-10 lg:h-full lg:py-32 z-0">
-      <div className="flex flex-wrap py-16 px-10 space-x-3  lg:gap-10  justify-center md:gap-10 gap-1 w-full ">
-        <Allprojectsbadge/>
+    <div className="lg:pl-72 md:py-24  py-10 lg:h-full lg:py-32 z-0">
+      <div className="flex lg:gap-10 mb-10 justify-center md:gap-10 gap-1 w-full py-5">
+      <Allprojectsbadge/>
         <Agriculturbadge/>
         <Educationbadge/>
         <Financebadge/>
@@ -36,10 +36,9 @@ export default function Projects() {
         <Sportsbadge/>
         <Tourismbadge/>
 
-        
       </div>
       <div className='z-0 gap-5 px-8 justify-center lg:flex lg:flex-wrap md:flex md:flex-wrap p-2 sm:flex sm:flex-wrap lg:gap-6 md:gap-10 md:justify-center '>
-        {projectData.map((projectData) => (
+        {financeProjects.map((projectData) => (
           <div className="border rounded-md shadow-sm hover:shadow-lg mb-10 w-80 lg:w-72 lg:h-[450px] h-[450px] md:w-64    "    key={projectData.id}  >
             <div className="">
               <img src={projectData.Image} alt="" className="rounded-t-lg" />

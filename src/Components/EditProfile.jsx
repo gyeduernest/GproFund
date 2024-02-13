@@ -3,9 +3,20 @@
 
 import { Datepicker, Button,  Label, TextInput, Textarea } from 'flowbite-react';
 import ProfileCard from './Profile';
+import { UserContext } from '../Context/UserContext';
+import { useContext, useState } from 'react';
+
 
 
 export default function EditProfile() {
+
+  const {username} = useContext(UserContext);
+  const [bio, setBio] = useState();
+
+
+  
+
+
   return (
     
     <>
@@ -17,7 +28,7 @@ export default function EditProfile() {
         <div className="mb-2 block">
           <Label htmlFor="username3" value="Username" />
         </div>
-        <TextInput id="username3" placeholder="Bonnie Green" addon="@" required />
+        <TextInput id="username3" placeholder="Bonnie Green" addon="@"  value={username} required />
       </div>
       <div className="max-w- z-0">
         <div className="mb-2 block">
@@ -29,9 +40,10 @@ export default function EditProfile() {
           <div className="mb-2 block">
             <Label htmlFor="comment" value="Your message" />
           </div>
-          <Textarea id="comment" placeholder="update your bio..." required rows={4} />
+          <Textarea id="comment" placeholder="update your bio..." required value={bio} onChange={(e) =>setBio(e.target.value)}   rows={4}  />
     </div>
       <div className="max-w- mt-5 w-full">
+        
           <Button className='w-full'>Update</Button>
       </div>
       </div>

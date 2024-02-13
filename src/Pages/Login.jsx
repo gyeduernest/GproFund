@@ -1,13 +1,13 @@
 'use client';
 import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
 import {  useState } from 'react';
-import { createUserWithEmailAndPassword} from 'firebase/auth';
+import { signInWithEmailAndPassword} from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import {auth} from "../../firebaseConfig"
 
 
 
-export default function Signup() {
+export default function Login() {
 
 const [username, setUsername] = useState("");
 const [email, setEmail] = useState("");
@@ -27,7 +27,7 @@ const createAccount = async (e) => {
   }
 
   try {
-    await createUserWithEmailAndPassword(auth, email, password);
+    await signInWithEmailAndPassword(auth, email, password);
     // const user = userCredential.user;
 
     navigate('/dashboard');
@@ -44,11 +44,11 @@ const createAccount = async (e) => {
 
   return (
     
-    <div className='flex justify-center lg:py-20 md:py-16 sm:py-16 py-16 px-5'>
+    <div className='flex justify-center lg:py-32 md:py-16 sm:py-16 py-16 px-5'>
 
     <form className="flex max-w-md flex-col py-5 gap-4 w-96"   >
       <h1>
-        Sign up
+        Log in
       </h1>
       <p className='text-xs text-slate-700'>
         Get your own account with GproFund and start making making contributions on stalled Government Projects
@@ -58,12 +58,7 @@ const createAccount = async (e) => {
             {errorState}
           </div>
     )}
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="username" value="Username" />
-        </div>
-        <TextInput id="username" type="text" placeholder="Nana_Addo" required   value={username} onChange={(e) => setUsername(e.target.value)} />
-      </div>
+      
       <div>
         <div className="mb-2 block">
           <Label htmlFor="email1" value="Your email" />
@@ -83,9 +78,11 @@ const createAccount = async (e) => {
       <Button type="submit" className='' color="blue" onClick={createAccount} >
         Submit  
       </Button>
-      <Link to="/login" className='text-center'>
-          Have an Account? Log in        
+        
+        <Link to="/" className='text-center'>
+          Dont have an Account? Create Account        
         </Link>
+
     </form>
     </div>
 
