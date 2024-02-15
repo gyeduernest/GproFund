@@ -1,9 +1,10 @@
 'use client';
 import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
-import {  useState } from 'react';
+import {  useContext, useState } from 'react';
 import { createUserWithEmailAndPassword} from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import {auth} from "../../firebaseConfig"
+import { UserContext } from '../Context/UserContext';
 
 
 
@@ -14,7 +15,7 @@ const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [errorState, setErrorState] = useState("");
 const navigate = useNavigate();
-
+const {updateUser} = useContext(UserContext)
 
 
 const createAccount = async (e) => {
@@ -34,7 +35,7 @@ const createAccount = async (e) => {
   } catch (error) {
     console.error('Authentication Error:', error);
   }
-    
+    updateUser(username)
   
 };
 

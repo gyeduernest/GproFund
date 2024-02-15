@@ -21,7 +21,7 @@ export default function AvatarDropdown() {
       <div className='px-3 mt-5 block sm:block md:block lg:hidden'>
       <Swap/>
       </div>
-      <Dropdown.Item><Logout/></Dropdown.Item>
+      <Logout/>
     </Dropdown>
   );
 }

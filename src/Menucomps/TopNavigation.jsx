@@ -1,7 +1,6 @@
 'use client';
 
-import { TextInput } from 'flowbite-react';
-import { HiSearch } from 'react-icons/hi';
+
 import AvatarDropdown from '../Components/AvatarDropdown';
 import { useContext } from 'react';
 import { UserContext } from '../Context/UserContext';
@@ -15,17 +14,15 @@ const { username  } = useContext(UserContext);
 
   return (
     <div>
-      <div className=" py-5 px-2 flex items-center gap-5">
+      <div className="z-50  py-5 px-2 flex items-center gap-5">
         <div className="flex items-center gap-4  lg:gap-8 w-full  lg:py-2   lg:px-20 justify-between">
-          <div className="hidden lg:flex md:flex sm:block">
+          <div className="lg:flex md:flex sm:block">
                 <h3>
               {username}
                 </h3>
           </div>
                 <div className="flex md:gap-4 items-center lg:gap-8 gap-5 px-5 ">
-                <div className="max-w-md">
-                        <TextInput id="email4" type="email" icon={HiSearch} placeholder="search for Project" required />
-                </div>
+               
 
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="w-6 h-6">
