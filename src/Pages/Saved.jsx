@@ -19,10 +19,6 @@ export default function Saved() {
 
 
 
-
-
-
-
   return (
     <div  className="lg:pl-72 md:py-32 py-10   lg:h-full lg:py-32  z-0 ">
           
